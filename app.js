@@ -5,8 +5,15 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "dist")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+app.get("*", (req, res) => {
+	let url = req.originalUrl.slice(1);
+    if (url === "") {
+        url = "index.html";
+    } else {
+        url = url.slice(4);
+    }
+
+    res.sendFile(path.join(__dirname, "dist", url));
 });
 
 app.listen(process.env.PORT || 8080, () => {
