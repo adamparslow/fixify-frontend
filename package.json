@@ -8,7 +8,7 @@
     "watch-debug": "vue-cli-service build --watch --mode debug",
     "lint": "vue-cli-service lint",
     "deploy": "npx glitcheroo deploy",
-    "start": "node app.js"
+    "start": "vue-cli-service build; node app.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
