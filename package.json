@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "watch-debug": "vue-cli-service build --watch --mode debug",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npx glitcheroo deploy"
   },
   "dependencies": {
     "core-js": "^3.6.5",
