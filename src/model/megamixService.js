@@ -1,17 +1,14 @@
 import tokenHandler from "./tokenHandler.js";
 
-// TODO: replace in .env
-const urlStart = "http://localhost:3000"
-
 const getMegamixRegistrationStatus = async () => {
-	const url = `${urlStart}/megamix/register?refresh_token=${tokenHandler.getRefreshToken()}`;
+	const url = `${process.env.VUE_APP_BACKEND_URI}/megamix/register?refresh_token=${tokenHandler.getRefreshToken()}`;
 
 	const response = await fetch(url);
 	return await response.json();
 };
 
 const registerForMegamix = async () => {
-	const url = urlStart + "/megamix/register";
+	const url = process.env.VUE_APP_BACKEND_URI + "/megamix/register";
 	const refreshToken = tokenHandler.getRefreshToken();
 	const body = {
 		refresh_token: refreshToken,
@@ -27,7 +24,7 @@ const registerForMegamix = async () => {
 };
 
 const deregisterFromMegamix = async () => {
-	const url = urlStart + "/megamix/register";
+	const url = process.env.VUE_APP_BACKEND_URI + "/megamix/register";
 	const refreshToken = tokenHandler.getRefreshToken();
 	const body = {
 		refresh_token: refreshToken,
@@ -43,7 +40,7 @@ const deregisterFromMegamix = async () => {
 };
 
 const createMegamix = async () => {
-	const url = urlStart + "/megamix/generate";
+	const url = process.env.VUE_APP_BACKEND_URI + "/megamix/generate";
 	const refreshToken = tokenHandler.getRefreshToken();
 	const body = {
 		refresh_token: refreshToken,

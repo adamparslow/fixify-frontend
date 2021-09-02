@@ -1,10 +1,8 @@
 import tokenHandler from "@/model/tokenHandler.js";
 
-// TODO: replace with .env
-const urlStart = "http://localhost:3000"
-
 const getPlaylists = async () => {
-	const url = urlStart + "/spotify/playlists";
+	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/playlists";
+	console.log(url);
 
 	const response = await fetch(url, {
 		headers: {
@@ -17,7 +15,7 @@ const getPlaylists = async () => {
 };
 
 const getPlaylistCoverArt = async (playlistHref, size) => {
-	const url = `${urlStart}/spotify/cover_art?playlist=${playlistHref}&size=${size}`;
+	const url = `${process.env.VUE_APP_BACKEND_URI}/spotify/cover_art?playlist=${playlistHref}&size=${size}`;
 
 	const response = await fetch(url, {
 		headers: {

@@ -92,7 +92,6 @@ function getSize(sizeWord) {
 // 	formData.playlist = JSON.parse(formData.playlist);
 // }
 
-// // TODO: move download data into the components
 // function downloadFile(data, fileName) {
 // 	const a = document.createElement("a"); //Create <a>
 // 	a.href = data;
