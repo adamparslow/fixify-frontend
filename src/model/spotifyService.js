@@ -2,29 +2,31 @@ import tokenHandler from "@/model/tokenHandler.js";
 
 const getPlaylists = async () => {
 	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/playlists";
-	console.log(url);
-
-	const response = await fetch(url, {
-		headers: {
-			access_token: tokenHandler.getAccessToken(),
-			refresh_token: tokenHandler.getRefreshToken(),
-		},
-	});
-
-	return await response.json();
+	return await sendRequestAndProcessResponse(url);
 };
 
 const getPlaylistCoverArt = async (playlistHref, size) => {
 	const url = `${process.env.VUE_APP_BACKEND_URI}/spotify/cover_art?playlist=${playlistHref}&size=${size}`;
+	return await sendRequestAndProcessResponse(url);
+};
 
+const sendRequestAndProcessResponse = async (url) => {
+	const accessToken = tokenHandler.getAccessToken();
+	console.log(accessToken);
 	const response = await fetch(url, {
 		headers: {
-			access_token: tokenHandler.getAccessToken(),
+			access_token: accessToken,
 			refresh_token: tokenHandler.getRefreshToken(),
+			expires_at: tokenHandler.getExpiresAt(),
 		},
 	});
-	return await response.json();
-};
+	const json = await response.json();
+
+	tokenHandler.setAccessToken(json.access_token);
+	tokenHandler.setExpiresAt(json.expires_at);
+
+	return json.data;
+}
 
 export default {
 	getPlaylists,
