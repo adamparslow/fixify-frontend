@@ -1,6 +1,6 @@
 <template>
-   <div class="search_centre" >
-      <input v-on:input="(inputEl) => search(inputEl.srcElement.value)" type="text"/>
+   <div class="flex justify-center items-center h-screen" >
+      <input v-on:input="(inputEl) => search(inputEl.srcElement.value)" type="text" placeholder="Search song..."/>
    </div>
 </template>
 
@@ -22,6 +22,7 @@ export default {
    methods: {
       search: function (searchValue) {
          const results = this.flexDocument.search(searchValue, { enrich: true });
+         console.log(results);
          results[0].result.forEach(result => {
             console.log(result);
          })
@@ -43,14 +44,3 @@ export default {
    }
 }
 </script>
-
-
-<style scoped>
-.search_centre {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-}
-
-</style>
