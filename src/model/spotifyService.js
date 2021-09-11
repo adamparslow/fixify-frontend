@@ -10,6 +10,11 @@ const getPlaylistCoverArt = async (playlistHref, size) => {
 	return await sendRequestAndProcessResponse(url);
 };
 
+const getLikedSongs = async () => {
+	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/liked_songs";
+	return await sendRequestAndProcessResponse(url);
+}
+
 const sendRequestAndProcessResponse = async (url) => {
 	const accessToken = tokenHandler.getAccessToken();
 	console.log(accessToken);
@@ -31,4 +36,5 @@ const sendRequestAndProcessResponse = async (url) => {
 export default {
 	getPlaylists,
 	getPlaylistCoverArt,
+	getLikedSongs
 };
