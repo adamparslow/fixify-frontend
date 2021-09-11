@@ -40,6 +40,7 @@ export default {
       search: function (searchValue) {
          const results = this.flexDocument.search(searchValue, { enrich: true });
          this.searchResults = results.length > 0 ? results[0].result.slice(0, 10) : [];
+         this.focusedElement = 0;
          console.log(this.searchResults);
       },
       getLikedSongs: async function () {
@@ -52,11 +53,16 @@ export default {
             this.focusedElement++;
          }
       },
+      selectSong() {
+        this.$router.push("/search/" + this.searchResults[this.focusedElement].doc.data.id);
+      },
       keypress(e) {
          if (e.key == "ArrowUp") {
             this.moveFocus(1);
          } else if (e.key == "ArrowDown") {
             this.moveFocus(-1);
+         } else if (e.key == "Enter") {
+            this.selectSong();
          }
       }
    },

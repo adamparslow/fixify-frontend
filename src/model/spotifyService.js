@@ -15,6 +15,11 @@ const getLikedSongs = async () => {
 	return await sendRequestAndProcessResponse(url);
 }
 
+const getSongData = async (songId) => {
+	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/song_details?id=" + songId;
+	return await sendRequestAndProcessResponse(url);
+}
+
 const sendRequestAndProcessResponse = async (url) => {
 	const accessToken = tokenHandler.getAccessToken();
 	console.log(accessToken);
@@ -36,5 +41,6 @@ const sendRequestAndProcessResponse = async (url) => {
 export default {
 	getPlaylists,
 	getPlaylistCoverArt,
-	getLikedSongs
+	getLikedSongs,
+	getSongData
 };
