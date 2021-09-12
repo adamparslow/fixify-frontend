@@ -7,8 +7,9 @@
     "build": "vue-cli-service build",
     "watch-debug": "vue-cli-service build --watch --mode debug",
     "lint": "vue-cli-service lint",
+    "predeploy": "vue-cli-service build; git add dist/*; git commit -m 'dist upload'",
     "deploy": "npx glitcheroo deploy",
-    "start": "vue-cli-service build; node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
