@@ -7,15 +7,15 @@
     "build": "vue-cli-service build",
     "watch-debug": "vue-cli-service build --watch --mode debug",
     "lint": "vue-cli-service lint",
-    "predeploy": "vue-cli-service build; git add dist/*; git commit -m 'dist upload'",
     "deploy": "npx glitcheroo deploy",
-    "start": "node app.js"
+    "start": "vue-clie-service build; node app.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "flexsearch": "^0.7.21",
     "npx": "^10.2.2",
+    "regenerator-runtime": "^0.13.9",
     "vue": "^2.6.12",
     "vue-router": "^3.2.0",
     "vuepress-plugin-flexsearch": "^0.2.0"
