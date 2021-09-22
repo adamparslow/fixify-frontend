@@ -20,6 +20,11 @@ const getSongData = async (songId) => {
 	return await sendRequestAndProcessResponse(url);
 }
 
+const getMoodRing = async () => {
+	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/mood_ring";
+	return await sendRequestAndProcessResponse(url);
+};
+
 const sendRequestAndProcessResponse = async (url) => {
 	const accessToken = tokenHandler.getAccessToken();
 	console.log(accessToken);
@@ -42,5 +47,6 @@ export default {
 	getPlaylists,
 	getPlaylistCoverArt,
 	getLikedSongs,
-	getSongData
+	getSongData,
+	getMoodRing
 };
