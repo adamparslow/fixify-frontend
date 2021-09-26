@@ -5,7 +5,4 @@ module.exports = {
 			Jimp: 'jimp'
 		}
 	},
-	transpileDependencies: [
-		/\bvue-awesome\b/
-	]
 };

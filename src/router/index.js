@@ -1,5 +1,4 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Collage from "../views/Collage.vue";
 import Megamix from "../views/Megamix.vue";
@@ -9,8 +8,6 @@ import MoodRing from "../views/MoodRing.vue";
 import Authorise from "../components/Home/Authorise.vue";
 // import Features from "../components/Home/Features.vue";
 import AuthReader from "../components/Home/AuthReader.vue";
-
-Vue.use(VueRouter);
 
 const routes = [
 	{
@@ -55,8 +52,9 @@ const routes = [
 	},
 ];
 
-const router = new VueRouter({
-	routes,
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes
 });
 
 export default router;

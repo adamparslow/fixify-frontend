@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col">
-        <div class="border-b-2 border-black py-1" @click="toggleNav">
-            <div class=" border border-white rounded-md p-1 px-2 hover:bg-gray-500"><v-icon name="bars" scale="1"/></div>
+        <div class="border-b-2 border-black py-1 w-12" @click="toggleNav">
+            <div class=" border border-white rounded-md p-1 px-2 hover:bg-gray-500"><MenuIcon /></div>
         </div>
         <div v-if="open" class="bg-gray-600 flex flex-col p-1 flex-1">
             <router-link class="nav-button hover:bg-blue-500" to="/">Home</router-link>
@@ -14,11 +14,12 @@
 
 <script setup>
 import { ref } from 'vue';
+import { MenuIcon } from '@heroicons/vue/outline';
 
 let open = ref(true);
 
 function toggleNav() {
-    open = !open;
+    open = !open.value;
 }
 </script>
 

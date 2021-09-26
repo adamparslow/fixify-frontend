@@ -82,7 +82,7 @@ export default {
          this.isLoading = false;
       }); 
    },
-   destroyed: function() {
+   unmounted: function() {
       window.removeEventListener('keydown', this.keypress);
    },
    components: {
