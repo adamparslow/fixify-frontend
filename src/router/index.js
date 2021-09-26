@@ -7,7 +7,7 @@ import Search from "../views/Search.vue";
 import SongDetails from "../views/SongDetails.vue";
 import MoodRing from "../views/MoodRing.vue";
 import Authorise from "../components/Home/Authorise.vue";
-import Features from "../components/Home/Features.vue";
+// import Features from "../components/Home/Features.vue";
 import AuthReader from "../components/Home/AuthReader.vue";
 
 Vue.use(VueRouter);
@@ -25,34 +25,34 @@ const routes = [
 			{
 				path: "",
 				name: "",
-				component: Features,
+				component: Search,
 			},
+			{
+				path: "search/:id",
+				name: "songDetails",
+				component: SongDetails
+			},
+			{
+				path: "collage",
+				name: "collage",
+				component: Collage,
+			},
+			{
+				path: "megamix",
+				name: "megamix",
+				component: Megamix,
+			},
+			{
+				path: "moodring",
+				name: "moodring",
+				component: MoodRing
+			}
 		],
 	},
 	{
 		path: "/auth/collect/:query",
 		component: AuthReader,
 	},
-	{
-		path: "/collage",
-		component: Collage,
-	},
-	{
-		path: "/megamix",
-		component: Megamix,
-	},
-	{
-		path: "/search",
-		component: Search
-	},
-	{
-		path: "/search/:id",
-		component: SongDetails
-	},
-	{
-		path: "/moodring",
-		component: MoodRing
-	}
 ];
 
 const router = new VueRouter({

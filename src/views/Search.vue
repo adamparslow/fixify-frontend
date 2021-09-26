@@ -1,7 +1,6 @@
 <template>
-   <div class="flex justify-center items-center h-screen">
+   <div class="flex justify-center items-center relative">
       <div class="flex flex-col bg-gray-200 p-4">
-         <router-link to="/" class="rounded-button">Home</router-link>
          <input v-on:input="(inputEl) => search(inputEl.srcElement.value)" 
          type="text" placeholder="Search song..." class="text-black outline-none"/>
          <ul class="divide-solid divide-y divide-black">

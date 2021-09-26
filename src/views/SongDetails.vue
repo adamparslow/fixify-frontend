@@ -1,6 +1,5 @@
 <template>
     <div class="flex flex-col">
-        <router-link to="/search">Back</router-link>
         {{$route.params.id}}    
 
         <hr>

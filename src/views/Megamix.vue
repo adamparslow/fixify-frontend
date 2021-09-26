@@ -4,7 +4,6 @@
             <header class="header-bar">
                 <h1>Megamix</h1>
             </header>
-            <router-link to="/" class="rounded-button">Home</router-link>
             <article>
                 <section>
                     <h2>What is a Megamix?</h2>
