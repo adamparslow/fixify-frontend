@@ -11,8 +11,11 @@ const getPlaylistCoverArt = async (playlistHref, size) => {
 };
 
 const getLikedSongs = async () => {
+	console.log("Start in frontend: " + Date.now());
 	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/liked_songs";
-	return await sendRequestAndProcessResponse(url);
+	const response = await sendRequestAndProcessResponse(url);
+	console.log("End of frontend:   " + Date.now());
+	return response;
 }
 
 const getSongData = async (songId) => {
