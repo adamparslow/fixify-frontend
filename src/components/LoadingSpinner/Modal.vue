@@ -11,7 +11,10 @@ export default {
     components: {
         Spinner
     }, 
-    props: ['isVisible']
+    props: ['isVisible'],
+    updated: function () {
+        console.log(this.isVisible);
+    }
 }
 </script>
 

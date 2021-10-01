@@ -1,8 +1,10 @@
 <template>
-    <div class="flex bg-gray-700 justify-between">
-        <div class="w-10 hover-button" @click="menuClick"><MenuIcon /></div>
-        <div class="flex items-center text-4xl"><p class="text-blue-500">Fixify</p></div>
-        <div class="flex items-center"><p class="hover-button">Logout</p></div>
+    <div class="flex justify-between bg-gray-700">
+        <div class="flex">
+            <div class="w-10 hover-button" @click="menuClick"><MenuIcon /></div>
+            <div class="flex items-center text-4xl"><p class="text-blue-500">Fixify</p></div>
+        </div>
+        <div class="flex items-center self-end"><p class="hover-button">Logout</p></div>
     </div>    
 </template>
 

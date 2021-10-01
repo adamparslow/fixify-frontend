@@ -16,8 +16,6 @@ const props = defineProps({
     'isCollapsed': Boolean
 })
 
-console.log(props.isCollapsed);
-
 </script>
 
 <style scoped>
