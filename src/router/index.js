@@ -15,11 +15,6 @@ const routes = [
 		component: Home,
 		children: [
 			{
-				path: "authorise",
-				name: "Authorise",
-				component: Authorise,
-			},
-			{
 				path: "",
 				name: "",
 				component: Search,
@@ -45,6 +40,11 @@ const routes = [
 				component: MoodRing
 			}
 		],
+	},
+	{
+		path: "/authorise",
+		name: "Authorise",
+		component: Authorise,
 	},
 	{
 		path: "/auth/collect/:query",
