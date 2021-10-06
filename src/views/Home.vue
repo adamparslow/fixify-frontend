@@ -8,36 +8,27 @@
     </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
 import Header from "../components/Home/Header.vue";
 import LeftNav from "../components/Home/LeftNav.vue";
 import tokenHandler from "@/model/tokenHandler.js";
+import router from "@/router";
 
-export default {
-    data: function() {
-        return {
-            leftNavCollapsed: false
-        };
-    },
-    methods: {
-        logout: function() {
-            tokenHandler.setAccessToken(null);
-            tokenHandler.setRefreshToken(null);
-            this.$router.push("/authorise");
-        },
-        menuClick: function() {
-            this.leftNavCollapsed = !this.leftNavCollapsed;
-        }
-    },
-    created: function() {
-        if (!tokenHandler.getAccessToken()) {
-            this.$router.push("/authorise");
-        }
-    },
-    components: {
-        Header,
-        LeftNav
-    }
+const logout = () => {
+    tokenHandler.setAccessToken(null);
+    tokenHandler.setRefreshToken(null);
+    router.push("/authorise");
+};
+
+const menuClick = () => {
+    leftNavCollapsed.value = !leftNavCollapsed.value;
+};
+
+const leftNavCollapsed = ref(false);
+
+if (!tokenHandler.getAccessToken()) {
+    router.push("/authorise");
 }
 </script>
 

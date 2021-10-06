@@ -33,10 +33,6 @@ const search = (searchValue) => {
    searchResults.value = searchValue.length > 0 ? results[0].result : fullResults;
 }
 
-// const selectSong = () => {
-//    this.$router.push("/search/" + searchResults[<element>].doc.data.id);
-// }
-
 let isLoading = ref(true);
 
 spotifyService.getLikedSongs().then(likedSongs => {
