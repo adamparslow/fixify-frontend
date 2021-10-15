@@ -26,19 +26,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## ```.env``` setup
 Create a ```.env``` file with the following fields: 
     ```
-    GLITCH_DEBUGGER=true
     VUE_APP_BACKEND_URI={yourbackenduri}
     ```
-     
-## Deployment onto Glitch
-1. (First time only) run 
-    ```
-    npx glitcheroo setup-target
-    ```
-    from glitch console. 
-2. From root directory, run 
-    ```
-    npm run deploy
-    ```
-3. (First time only) Copy in the link to your glitch repo.
 
+## Deployment onto Firebase
+1. (First time) setup firebase
+1.a. `firebase login` to log in
+1.b. `firebase init` to connect to the hosting
+2. To deploy `npm run deploy`
