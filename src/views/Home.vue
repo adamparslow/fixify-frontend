@@ -12,7 +12,7 @@
 import { ref } from "vue";
 import Header from "../components/Home/Header.vue";
 import LeftNav from "../components/Home/LeftNav.vue";
-import tokenHandler from "@/model/tokenHandler.js";
+import tokenHandler from "../service/tokenHandler.js";
 import router from "@/router";
 
 const logout = () => {

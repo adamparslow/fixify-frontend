@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import CollageForm from "@/components/Collage/CollageForm.vue";
+import CollageForm from "../components/Collage/CollageForm.vue";
 // import CollageCanvas from "@/components/Collage/CollageCanvas.vue";
-import canvasFormService from "../model/canvasFormService.js";
+import canvasFormService from "../service/canvasFormService.js";
 
 export default {
 	components: {

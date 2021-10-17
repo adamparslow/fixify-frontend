@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import megamixService from "@/model/megamixService.js";
-import LoadingSpinnerModal from "@/components/LoadingSpinner/Modal.vue";
+import megamixService from "../service/megamixService.js";
+import LoadingSpinnerModal from "../components/LoadingSpinner/Modal.vue";
 
 export default {
     data: function () {

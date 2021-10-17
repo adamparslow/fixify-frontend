@@ -1,4 +1,4 @@
-import tokenHandler from "@/model/tokenHandler.js";
+import tokenHandler from "./tokenHandler.js";
 
 const getPlaylists = async () => {
 	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/playlists";
@@ -15,6 +15,20 @@ const getLikedSongs = async () => {
 	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/liked_songs";
 	const response = await sendRequestAndProcessResponse(url);
 	console.log("End of frontend:   " + Date.now());
+	return response;
+}
+
+const backupLikedSongs = async () => {
+	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/liked_songs/backup";
+	const response = await fetch(url, {
+		method: 'POST',
+		headers: {
+			access_token: tokenHandler.getAccessToken(),
+			refresh_token: tokenHandler.getRefreshToken(),
+			expires_at: tokenHandler.getExpiresAt(),
+		}
+	});
+	// console.log("End of frontend:   " + Date.now());
 	return response;
 }
 
@@ -50,6 +64,7 @@ export default {
 	getPlaylists,
 	getPlaylistCoverArt,
 	getLikedSongs,
+	backupLikedSongs,
 	getSongData,
 	getMoodRing
 };

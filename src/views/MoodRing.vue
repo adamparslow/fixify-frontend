@@ -9,7 +9,7 @@
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
 import '@amcharts/amcharts4/charts';
-import spotifyService from "@/model/spotifyService.js";
+import spotifyService from "../service/spotifyService.js";
 
 export default {
     mounted: async function() {

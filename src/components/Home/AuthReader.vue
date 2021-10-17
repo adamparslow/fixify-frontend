@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import tokenHandler from "@/model/tokenHandler.js";
+import tokenHandler from "../../service/tokenHandler.js";
 
 export default {
     created: function () {

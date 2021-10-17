@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import spotifyService from "@/model/spotifyService.js";
+import spotifyService from "../service/spotifyService.js";
 
 export default {
     data: function () {

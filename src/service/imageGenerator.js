@@ -1,4 +1,4 @@
-import canvasEngine from "@/model/canvasEngine.js";
+import canvasEngine from "./canvasEngine.js";
 
 /**
  * Generate the image using JIMP

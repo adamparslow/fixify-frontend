@@ -1,6 +1,6 @@
-import spotifyService from "@/model/spotifyService.js";
-import canvasEngine from "@/model/canvasEngine.js";
-import imageGenerator from "@/model/imageGenerator.js";
+import spotifyService from "./spotifyService.js";
+import canvasEngine from "./canvasEngine.js";
+import imageGenerator from "./imageGenerator.js";
 
 async function formHandler(form) {
 	const formData = processForm(form);

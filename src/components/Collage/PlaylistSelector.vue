@@ -12,8 +12,7 @@
 </template>
 
 <script>
-// import tokenHandler from "@/model/tokenHandler.js";
-import spotifyService from "@/model/spotifyService.js";
+import spotifyService from "../../service/spotifyService.js";
 
 export default {
 	data: function () {
