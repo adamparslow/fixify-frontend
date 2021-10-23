@@ -1,20 +1,26 @@
 <template>
-   <div class="relative">
-      <div class="flex-1 flex flex-col">
-         <SearchBar @search="search" />
-         <SongSearchResults :results="searchResults" />
+   <div class="flex">
+      <div class="flex-1 flex flex-col relative">
+         <div class="flex-1 flex flex-col">
+            <SearchBar @search="search" />
+            <SongSearchResults :results="searchResults" />
+         </div>
+         <LoadingSpinnerModal :is-visible="isLoading" />
       </div>
-      <LoadingSpinnerModal :is-visible="isLoading" />
+      <div class="w-40 border-l-2 border-black flex flex-col">
+         <BackupStatus />
+      </div>
    </div>
 </template>
 
 <script setup>
 import { Document } from "flexsearch"
 import { ref } from 'vue';
-import spotifyService from "@/model/spotifyService.js";
-import LoadingSpinnerModal from "@/components/LoadingSpinner/Modal.vue";
-import SearchBar from "@/components/Search/SearchBar.vue";
-import SongSearchResults from "@/components/Search/SongSearchResults.vue";
+import spotifyService from "../service/spotifyService.js";
+import LoadingSpinnerModal from "../components/LoadingSpinner/Modal.vue";
+import SearchBar from "../components/Search/SearchBar.vue";
+import SongSearchResults from "../components/Search/SongSearchResults.vue";
+import BackupStatus from "../components/Search/BackupStatus.vue"
 
 const flexDocument = new Document({
    tokenize: "forward", 
