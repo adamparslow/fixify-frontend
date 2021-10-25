@@ -1,4 +1,4 @@
-import spotifyService from "./spotifyService.js";
+import spotifyService from "./backend/spotifyService.js";
 import canvasEngine from "./canvasEngine.js";
 import imageGenerator from "./imageGenerator.js";
 
