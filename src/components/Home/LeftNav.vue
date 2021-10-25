@@ -5,7 +5,7 @@
             <router-link class="nav-button hover:bg-green-500" to="/megamix">Megamix</router-link>
             <router-link class="nav-button hover:bg-red-500" to="/collage">Collage</router-link>
             <router-link class="nav-button hover:bg-purple-500" to="/moodring">Mood Ring</router-link>
-            <router-link class="nav-button hover:bg-yellow-500" to="/concert_watch">Concert Watch</router-link>
+            <router-link class="nav-button hover:bg-yellow-500" to="/concert-watch">Concert Watch</router-link>
         </div>
     </div>
 </template>

@@ -42,12 +42,12 @@ const routes = [
 				component: MoodRing
 			},
 			{
-				path: "concert_watch",
+				path: "concert-watch",
 				name: "concert_watch",
 				component: ConcertWatch
 			},
 			{
-				path: "concert_watch/setup",
+				path: "concert-watch/setup",
 				name: "concert_watch_setup",
 				component: ConcertWatchSetup
 			}
