@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import megamixService from "../service/megamixService.js";
+import megamixService from "../service/backend/megamixService.js";
 import LoadingSpinnerModal from "../components/LoadingSpinner/Modal.vue";
 
 export default {

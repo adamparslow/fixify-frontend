@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import spotifyService from '../../service/spotifyService.js';
+import spotifyService from '../../service/backend/spotifyService.js';
 import { ref } from 'vue';
 import Spinner from "../StatusSpinner/Spinner.vue";
 

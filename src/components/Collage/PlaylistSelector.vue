@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import spotifyService from "../../service/spotifyService.js";
+import spotifyService from "../../service/backend/spotifyService.js";
 
 export default {
 	data: function () {

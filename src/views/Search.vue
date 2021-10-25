@@ -16,7 +16,7 @@
 <script setup>
 import { Document } from "flexsearch"
 import { ref } from 'vue';
-import spotifyService from "../service/spotifyService.js";
+import spotifyService from "../service/backend/spotifyService.js";
 import LoadingSpinnerModal from "../components/LoadingSpinner/Modal.vue";
 import SearchBar from "../components/Search/SearchBar.vue";
 import SongSearchResults from "../components/Search/SongSearchResults.vue";

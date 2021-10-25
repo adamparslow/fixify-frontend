@@ -1,4 +1,4 @@
-import tokenHandler from "./tokenHandler.js";
+import tokenHandler from "../tokenHandler.js";
 
 const getPlaylists = async () => {
 	const url = process.env.VUE_APP_BACKEND_URI + "/spotify/playlists";

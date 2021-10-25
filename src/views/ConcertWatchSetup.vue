@@ -6,3 +6,8 @@
         <div class="flex-1"></div>
     </div>
 </template>
+
+<script setup>
+
+
+</script>
